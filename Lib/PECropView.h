@@ -28,6 +28,8 @@
 
 @property (nonatomic, weak, readonly) UIRotationGestureRecognizer *rotationGestureRecognizer;
 
+@property (nonatomic) BOOL cropRectViewResizable;
+
 - (void)resetCropRect;
 - (void)resetCropRectAnimated:(BOOL)animated;
 

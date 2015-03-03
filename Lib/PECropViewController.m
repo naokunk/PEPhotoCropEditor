@@ -203,6 +203,13 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     [self.cropView resetCropRectAnimated:animated];
 }
 
+- (void)setCropRectViewResizable:(BOOL)cropRectViewResizable
+{
+    _cropRectViewResizable = cropRectViewResizable;
+    self.cropView.cropRectViewResizable = self.cropRectViewResizable;
+}
+
+
 #pragma mark -
 
 - (void)cancel:(id)sender

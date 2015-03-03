@@ -29,6 +29,7 @@
 
 @property (nonatomic, readonly) CGRect zoomedCropRect;
 
+@property (nonatomic) BOOL cropRectViewResizable;
 
 - (void)resetCropRect;
 - (void)resetCropRectAnimated:(BOOL)animated;

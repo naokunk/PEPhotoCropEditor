@@ -33,6 +33,9 @@
 
 - (void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer
 {
+    if (!_resizable) {
+        return;
+    }
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         CGPoint translationInView = [gestureRecognizer translationInView:self.superview];
         self.startPoint = CGPointMake(roundf(translationInView.x), translationInView.y);

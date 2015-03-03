@@ -163,6 +163,19 @@
     }
 }
 
+- (void)setResizable:(BOOL)resizable
+{
+    _resizable = resizable;
+    self.topLeftCornerView.resizable = self.resizable;
+    self.topRightCornerView.resizable = self.resizable;
+    self.bottomLeftCornerView.resizable = self.resizable;
+    self.bottomRightCornerView.resizable = self.resizable;
+    self.topEdgeView.resizable = self.resizable;
+    self.leftEdgeView.resizable = self.resizable;
+    self.bottomEdgeView.resizable = self.resizable;
+    self.rightEdgeView.resizable = self.resizable;
+}
+
 #pragma mark -
 
 - (void)resizeControlViewDidBeginResizing:(PEResizeControl *)resizeControlView

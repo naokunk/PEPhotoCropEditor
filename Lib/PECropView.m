@@ -344,6 +344,13 @@ static const CGFloat MarginLeft = 20.0f;
     return zoomedCropRect;
 }
 
+- (void)setCropRectViewResizable:(BOOL)cropRectViewResizable
+{
+    _cropRectViewResizable = cropRectViewResizable;
+    self.cropRectView.resizable = self.cropRectViewResizable;
+}
+
+
 - (BOOL)userHasModifiedCropArea
 {
     CGRect zoomedCropRect = CGRectIntegral(self.zoomedCropRect);
